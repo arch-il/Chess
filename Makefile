@@ -1,5 +1,10 @@
+SRCS = ./src/main.cpp ./src/Chess.cpp
+GCC = g++
+CFLAGS = -o bin/Chess.exe
+ARGS = -Wall -Wextra -pedantic -I ./inc -fdiagnostics-color=always -g --std=c++17
+
 build:
-	@g++ -o bin/Chess.exe src/main.cpp src/Chess.cpp -Wall -Wextra -pedantic -I inc -fdiagnostics-color=always -g --std=c++17
+	@$(GCC) $(CFLAGS) $(SRCS) $(ARGS) 
 
 run: build
 	@./bin/Chess.exe
